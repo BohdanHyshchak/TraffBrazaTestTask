@@ -1,11 +1,11 @@
-package com.example.graypart
+package com.example.traff
 
 import android.app.Application
 import android.provider.Settings
 import android.util.Log
 import com.appsflyer.AppsFlyerLib
-import com.example.graypart.sdk.AppsFlyer
-import com.example.graypart.sdk.OneSignal
+import com.example.traff.sdk.AppsFlyer
+import com.example.traff.sdk.OneSignal
 
 class MyApplication : Application() {
 
@@ -22,4 +22,7 @@ class MyApplication : Application() {
         appsFlyerClient.init(this)
         oneSignalClient.init(this)
     }
+
+    fun getUUID() = AppsFlyerLib.getInstance().getAppsFlyerUID(this)
+    fun getAndroidID() = Settings.Secure.getString(this.contentResolver, Settings.Secure.ANDROID_ID)!!
 }

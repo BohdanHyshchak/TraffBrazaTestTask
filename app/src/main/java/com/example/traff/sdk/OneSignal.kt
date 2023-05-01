@@ -1,4 +1,4 @@
-package com.example.graypart.sdk
+package com.example.traff.sdk
 
 import android.content.Context
 import com.onesignal.OneSignal
@@ -9,6 +9,7 @@ class OneSignal {
 
     fun init(context: Context) {
         // Logging set to help debug issues, remove before releasing your app.
+        // TODO: remove
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE)
 
         // OneSignal Initialization

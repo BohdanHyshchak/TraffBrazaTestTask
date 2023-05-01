@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.graypart'
+    namespace 'com.example.traff'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.graypart"
+        applicationId "com.example.traff"
         minSdk 26
         targetSdk 33
         versionCode 1

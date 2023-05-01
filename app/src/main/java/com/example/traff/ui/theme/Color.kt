@@ -1,4 +1,4 @@
-package com.example.graypart.ui.theme
+package com.example.traff.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
