@@ -1,4 +1,4 @@
-package com.example.traff.sdk
+package com.example.traffbraza.sdk
 
 import android.content.Context
 import com.onesignal.OneSignal

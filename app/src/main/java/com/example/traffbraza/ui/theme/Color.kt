@@ -1,4 +1,4 @@
-package com.example.traff.ui.theme
+package com.example.traffbraza.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

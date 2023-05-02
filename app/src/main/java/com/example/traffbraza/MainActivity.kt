@@ -1,4 +1,4 @@
-package com.example.traff
+package com.example.traffbraza
 
 import android.app.Activity
 import android.net.Uri
@@ -15,10 +15,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
-import com.example.traff.ui.Routes
-import com.example.traff.ui.screens.FirstScreen
-import com.example.traff.ui.screens.WebViewScreen
-import com.example.traff.ui.theme.TraffTestTheme
+import com.example.traffbraza.ui.Routes
+import com.example.traffbraza.ui.screens.FirstScreen
+import com.example.traffbraza.ui.screens.WebViewScreen
+import com.example.traffbraza.ui.theme.TraffTestTheme
 import kotlinx.coroutines.launch
 import kotlin.coroutines.suspendCoroutine
 

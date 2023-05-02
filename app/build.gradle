@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.traff'
+    namespace 'com.example.traffbraza'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.traff"
+        applicationId "com.example.traffbraza"
         minSdk 26
         targetSdk 33
         versionCode 1

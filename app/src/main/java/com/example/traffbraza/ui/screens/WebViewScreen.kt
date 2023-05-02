@@ -1,4 +1,4 @@
-package com.example.traff.ui.screens
+package com.example.traffbraza.ui.screens
 
 import android.util.Log
 import android.webkit.CookieManager
@@ -17,9 +17,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
-import com.example.traff.MainActivity
-import com.example.traff.ui.Routes
-import com.example.traff.util.ChromeClient
+import com.example.traffbraza.MainActivity
+import com.example.traffbraza.ui.Routes
+import com.example.traffbraza.util.ChromeClient
 
 @Composable
 fun WebViewScreen(activity: MainActivity, navigation: NavController) {

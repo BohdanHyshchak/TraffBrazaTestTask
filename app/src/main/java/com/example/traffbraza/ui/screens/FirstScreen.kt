@@ -1,4 +1,4 @@
-package com.example.traff.ui.screens
+package com.example.traffbraza.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
-import com.example.traff.ui.Routes
+import com.example.traffbraza.ui.Routes
 
 @Composable
 fun FirstScreen(

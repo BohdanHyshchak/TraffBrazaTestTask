@@ -1,4 +1,4 @@
-package com.example.traff.ui
+package com.example.traffbraza.ui
 
 object Routes {
     const val FIRST_SCREEN = "FirstScreen"

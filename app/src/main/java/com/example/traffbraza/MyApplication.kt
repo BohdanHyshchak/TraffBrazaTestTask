@@ -1,11 +1,11 @@
-package com.example.traff
+package com.example.traffbraza
 
 import android.app.Application
 import android.provider.Settings
 import android.util.Log
 import com.appsflyer.AppsFlyerLib
-import com.example.traff.sdk.AppsFlyer
-import com.example.traff.sdk.OneSignal
+import com.example.traffbraza.sdk.AppsFlyer
+import com.example.traffbraza.sdk.OneSignal
 
 class MyApplication : Application() {
 

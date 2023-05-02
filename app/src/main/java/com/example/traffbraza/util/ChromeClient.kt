@@ -1,11 +1,11 @@
-package com.example.traff.util
+package com.example.traffbraza.util
 
 import android.content.Intent
 import android.net.Uri
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebView
-import com.example.traff.MainActivity
+import com.example.traffbraza.MainActivity
 
 class ChromeClient(private val myActivity: MainActivity) : WebChromeClient() {
     override fun onShowFileChooser(
