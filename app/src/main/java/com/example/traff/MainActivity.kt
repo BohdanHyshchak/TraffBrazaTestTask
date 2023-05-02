@@ -17,18 +17,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.traff.ui.screens.MainContent
-import com.example.traff.ui.theme.GrayPartTheme
+import com.example.traff.ui.theme.TraffTestTheme
 
 class MainActivity : ComponentActivity() {
 
-    var filePath: ValueCallback<Array<Uri>>? = null;
+    var filePath: ValueCallback<Array<Uri>>? = null
 
     val getFile = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == Activity.RESULT_CANCELED) {
             filePath?.onReceiveValue(null)
         } else if (it.resultCode == Activity.RESULT_OK && filePath != null) {
             filePath!!.onReceiveValue(
-                WebChromeClient.FileChooserParams.parseResult(it.resultCode, it.data))
+                WebChromeClient.FileChooserParams.parseResult(it.resultCode, it.data),
+            )
             filePath = null
         }
     }
@@ -42,7 +43,7 @@ class MainActivity : ComponentActivity() {
         Log.d("MainActivity", "uuid = $uuid, androidId = $androidID")
 
         setContent {
-            GrayPartTheme {
+            TraffTestTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -65,7 +66,7 @@ class MainActivity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun GreetingPreview() {
-        GrayPartTheme {
+        TraffTestTheme {
             Greeting("Android")
         }
     }
