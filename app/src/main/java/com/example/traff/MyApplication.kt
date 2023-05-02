@@ -19,8 +19,9 @@ class MyApplication : Application() {
         val appsFlyerClient = AppsFlyer()
         val oneSignalClient = OneSignal()
 
-        appsFlyerClient.init(this)
+//        appsFlyerClient.init(this)
         oneSignalClient.init(this)
+
     }
 
     fun getUUID() = AppsFlyerLib.getInstance().getAppsFlyerUID(this)
