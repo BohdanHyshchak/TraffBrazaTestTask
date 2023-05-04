@@ -15,16 +15,19 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
+import com.example.traffbraza.game.GameRoute
 import com.example.traffbraza.ui.Routes
 import com.example.traffbraza.ui.screens.FirstScreen
 import com.example.traffbraza.ui.screens.WebViewScreen
 import com.example.traffbraza.ui.theme.TraffTestTheme
+import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.suspendCoroutine
 
 class MainActivity : ComponentActivity() {
 
-    private val devKey = "UzECrCrkUBSqGMrqUtLjh3"
+    private val devKey = "PDgB82frLkGuFghq5T5EyG"
 
     var filePath: ValueCallback<Array<Uri>>? = null
 
@@ -42,15 +45,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        lifecycleScope.launch {
-            val campaingCD = processConversionData(initAppsFlyer())
-            Log.d("TEST", "campaingCD = $campaingCD")
+        lifecycleScope.launch(Dispatchers.IO) {
+            val advertisingID = try {
+                AdvertisingIdClient.getAdvertisingIdInfo(this@MainActivity.applicationContext).id.toString()
+            } catch (exception: Exception) {
+                "null"
+            }
+            Log.d("TEST", "advertisingID = $advertisingID")
         }
 
         val uuid = (application as MyApplication).getUUID()
         val androidID = (application as MyApplication).getAndroidID()
-
-        Log.d("MainActivity", "uuid = $uuid, androidId = $androidID")
 
         setContent {
             TraffTestTheme {
@@ -62,6 +67,9 @@ class MainActivity : ComponentActivity() {
                     }
                     composable(Routes.WEB_VIEW_SCREEN) {
                         WebViewScreen(navigation = navController, activity = this@MainActivity)
+                    }
+                    composable(Routes.GAME_SCREEN) {
+                        GameRoute()
                     }
                 }
             }

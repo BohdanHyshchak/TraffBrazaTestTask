@@ -8,7 +8,7 @@ import java.util.Objects
 
 class AppsFlyer {
 
-    private val devKey = "UzECrCrkUBSqGMrqUtLjh3"
+    private val devKey = "PDgB82frLkGuFghq5T5EyG"
 
     private val appsFlyerClient = AppsFlyerLib.getInstance()
 

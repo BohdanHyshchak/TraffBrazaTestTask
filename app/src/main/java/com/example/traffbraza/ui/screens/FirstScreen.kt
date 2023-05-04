@@ -32,7 +32,7 @@ fun FirstScreen(
             Button(onClick = { navigation.navigate(Routes.WEB_VIEW_SCREEN) }) {
                 Text(text = "WebView")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navigation.navigate(Routes.GAME_SCREEN) }) {
                 Text("Game")
             }
         }
