@@ -1,12 +1,11 @@
-package com.example.traffbraza.sdk
+package com.example.traffbraza.webview.sdk
 
 import android.content.Context
 import com.onesignal.OneSignal
 
+object OneSignal {
 
-private const val ONESIGNAL_APP_ID = "76bc7031-1339-4195-8557-e923757663f4"
-
-class OneSignal {
+    private const val ONESIGNAL_APP_ID = "76bc7031-1339-4195-8557-e923757663f4"
 
     fun init(context: Context) {
         // Logging set to help debug issues, remove before releasing your app.

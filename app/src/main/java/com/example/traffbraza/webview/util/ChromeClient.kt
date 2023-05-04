@@ -1,4 +1,4 @@
-package com.example.traffbraza.util
+package com.example.traffbraza.webview.util
 
 import android.content.Intent
 import android.net.Uri
