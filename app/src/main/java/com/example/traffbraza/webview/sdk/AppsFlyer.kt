@@ -28,18 +28,3 @@ object AppsFlyer {
         appsFlyerClient.start(context)
     }
 }
-
-// For Future
-// for (attrName in data.keys)
-// Log.d("MyApplication", "Conversion attribute: " + attrName + " = " + data[attrName])
-// val status = Objects.requireNonNull(data["af_status"]).toString()
-// if (status == "Non-organic") {
-//    if (Objects.requireNonNull(data["is_first_launch"]).toString() == "true") {
-//        Log.d("MyApplication", "Conversion: First Launch")
-//    } else {
-//        Log.d("MyApplication", "Conversion: Not First Launch")
-//    }
-// } else {
-//    Log.d("MyApplication", "Conversion: This is an organic install.")
-// }
-// conversionData = data

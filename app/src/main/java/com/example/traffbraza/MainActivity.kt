@@ -12,7 +12,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -45,7 +44,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val scope = rememberCoroutineScope()
             val isAllowed = remember { mutableStateOf(false) }
             val urlParams = remember { mutableStateOf("") }
             TraffTestTheme {
@@ -95,15 +93,3 @@ class MainActivity : ComponentActivity() {
         return ""
     }
 }
-
-//          For future
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            val advertisingID = try {
-//                AdvertisingIdClient.getAdvertisingIdInfo(this@MainActivity.applicationContext).id.toString()
-//            } catch (exception: Exception) {
-//                "null"
-//            }
-//            Log.d("TEST", "advertisingID = $advertisingID")
-//        }
-//        val uuid = (application as MyApplication).getUUID()
-//        val androidID = (application as MyApplication).getAndroidID()

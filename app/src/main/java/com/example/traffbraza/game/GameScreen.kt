@@ -62,6 +62,7 @@ fun TicTacToeScreen(gameViewModel: TicTacToeVM) {
 @Composable
 fun ButtonGrid(modifier: Modifier = Modifier, board: ArrayList<String>, onclick: (Int) -> Unit) {
     Column(
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
     ) {
