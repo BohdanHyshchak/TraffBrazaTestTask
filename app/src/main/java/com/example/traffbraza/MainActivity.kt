@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
                     composable(
                         NavRoute.WebViewScreen.path + "/{urlParams}",
                         arguments = listOf(
-                            navArgument("urlParams") {
+                            navArgument(NavRoute.WebViewScreen.urlParams) {
                                 type = NavType.StringType
                                 defaultValue = ""
                                 nullable = false
@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
                         WebViewScreen(
                             navigation = navController,
                             activity = this@MainActivity,
-                            urlParameters = it.arguments?.getString("urlParams") ?: "",
+                            urlParameters = it.arguments?.getString(NavRoute.WebViewScreen.urlParams) ?: "",
                         )
                     }
                     composable(NavRoute.GameScreen.path) {

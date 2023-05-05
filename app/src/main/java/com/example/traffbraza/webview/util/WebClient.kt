@@ -11,7 +11,7 @@ class WebClient(private val onSaveUrl: (String?) -> Unit, private val urlParamet
         onSaveUrl(url)
 
         if (url != null) {
-            if (url.contains("fex", true)) {
+            if (url.contains("fex.net", true)) {
                 Log.d("WebClient", "Campaign from Apps: $urlParameters")
             }
         }

@@ -7,7 +7,7 @@ sealed class NavRoute(val path: String) {
     object GameScreen : NavRoute("game_screen")
 
     object WebViewScreen : NavRoute("web_view_screen") {
-        val urlParams = "urlParams"
+        const val urlParams = "urlParams"
     }
 
     // build navigation path (for screen navigation)
@@ -15,7 +15,11 @@ sealed class NavRoute(val path: String) {
         return buildString {
             append(path)
             args.forEach { arg ->
-                append("/$arg")
+                if (arg.isNotBlank()) {
+                    append("/$arg")
+                } else {
+                    append("/test_campaign") // TODO: remove on production
+                }
             }
         }
     }
